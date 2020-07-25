@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 html {
   font-size: 62.5%;
@@ -23,14 +25,20 @@ body {
   pointer-events: none;
 }
 header {
-  box-sizing: content-box;
+  box-sizing: border-box;
   border-top: 2rem solid black;
   border-bottom: 0.1rem solid black;
-  height: 7rem;
+  height: 9rem;
   position: sticky;
   background-color: white;
   top: 0;
   z-index: 1;
+  width: 100%;
+}
+@media screen and (max-width: 833px) {
+  header {
+    height: 16rem;
+  }
 }
 #media-links {
   position: absolute;
@@ -49,18 +57,48 @@ header {
   margin-left: 3px;
 }
 h1 {
-  position: absolute;
-  bottom: 15px;
-  width: 30%;
-  margin: 0 0 0 4rem;
-  line-height: 82%;
+  width: 50%;
+  margin: 1.3rem 2rem 0 4rem;
   font-size: 4rem;
+  float: left;
+}
+.nav-list {
+  float: right;
+  font-size: 1.5rem;
+  margin: 3.3rem 4rem 0 0;
+}
+.nav-list li {
+  margin-left: 2rem;
+  list-style: none;
+  display: inline-block;
+}
+
+.section-button {
+  border: 2px solid black;
+  background: black;
+  color: white;
+  width: 8rem;
+  text-align: center;
+  padding: 0.2rem 0 0.2rem 0;
+}
+.section-button:hover {
+  background-color: rgb(255, 238, 1);
+  color: black;
+  border: solid 2px black;
+  cursor: pointer;
+}
+.nav-list li a {
+  text-decoration: none;
 }
 section {
   margin-top: 2rem;
   margin-left: 4rem;
   width: 40%;
+  min-width: 300px;
   font-size: 1.2rem;
+}
+.clear {
+  clear: both;
 }
 footer {
   margin-top: 2rem;
